@@ -1,30 +1,3 @@
-1. A title indicating what application-layer protocol is being used.
-
-  2. 1-2 paragraphs explaining how that protocol works and what it is used for. Include images and diagrams as necessary. Explain the steps taken in communication of the protocol.
-
-     - Include an image of the back-and-forth communication the protocol did in the pcap to help illustrate your explanation.
-
-  3. 2-3 paragraphs explaining what happened in the communication across the network.
-
-     - You should at least answer:
-
-       - Who was sending/receiving information?
-
-       - What was the topic of conversation?
-
-       - What data was transmitted?
-
-     - Include information such as ports used, source/destination IPs, and how much data was transmitted.
-
-     - **Use images throughout to explain how you found this information.**
-
-  4. Any other information of note related to the PCAP file.
-
-
-  1. TCP Transmission Control Protocol 
-
-  2. 2-3 paragraphs explaining what happened in the communication across the network.
-
   TCP (Layer 4 of OSI Model) ensures that the data streaming from point A to point B is successfully sent and recieved.  The data comes in forms of "packets" organized according to the TCP protocol.  TCP ensures that the data maintains its integrity within these packets so that they can communicate with designated applications it influences. It ensures reliability on the structure of the data transmitted and to do so, it sacrifices speed. This is why streaming videos probably should use a different protocol other than TCP. 
 
   TCP uses a method called "positive acknowledgement with retransmission", which is a way to describe the process of request response that TCP utilizes.  This way, the requester knows in what order to send packets to maintain a good data stream.  The data sent will match the data recieved in byte format and will be unaltered from point A to point B. 
@@ -38,28 +11,30 @@
  	User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.7) Gecko/20091221 Firefox/3.5.7
  	http://www.chrissanders.org/?p=310 == REDIRECT error 
 
- 	1. Sanders POST request -> http://www.chrissanders.org/?p=310
+ 	3A. Sanders POST request -> http://www.chrissanders.org/?p=310
 
- 	2. Set cookies - zipfile ?? text html 
+ 	3B. Set cookies - zipfile ?? text html 
  	is this a malicious attack to try to modify data via http browser code? 
 
- 	3. What data was transmitted? a zip file via port 80
+ 	3C. What data was transmitted? a zip file via port 80
 
 
-
-Is this code injection? 
+  NOTE: Is this code injection? 
 	- Who was sending/receiving information?
 	ip.src==172.16.16.128&&http
 	ip.dst==172.16.16.128&&http
+  Suspicious JS: var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");  
 
        - What was the topic of conversation?
+       posting on website
 
 
        - What data was transmitted?
-<link rel='canonical' href='http://www.chrissanders.org/?p=310' />
+       packets with comment material and text, I believe 
 
 
 
- var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");	
+
+
 
 
