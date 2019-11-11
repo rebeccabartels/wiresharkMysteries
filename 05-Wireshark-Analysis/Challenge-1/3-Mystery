@@ -1,21 +1,20 @@
-1. A title indicating what application-layer protocol is being used.
-
-  2. 1-2 paragraphs explaining how that protocol works and what it is used for. Include images and diagrams as necessary. Explain the steps taken in communication of the protocol.
-
-     - Include an image of the back-and-forth communication the protocol did in the pcap to help illustrate your explanation.
-
-  3. 2-3 paragraphs explaining what happened in the communication across the network.
-
-     - You should at least answer:
-
-       - Who was sending/receiving information?
-
-       - What was the topic of conversation?
-
-       - What data was transmitted?
-
-     - Include information such as ports used, source/destination IPs, and how much data was transmitted.
-
-     - **Use images throughout to explain how you found this information.**
 
   4. Any other information of note related to the PCAP file. 
+
+  1. FTP 
+
+  2. The File Transfer Protocol (FTP) is a standard network protocol used for the transfer of computer files between a client and server on a computer network. FTP is built on a client-server model architecture using separate control and data connections between the client and the server.You can work with FTP using a simple command-line interface, such as the DOS console in Windows and Terminal in Linux and macOS. If you don’t want to use those, though, there are graphical user interface solutions, such as Filezilla or WS FTP Pro. Browsers also allow you to download files via FTP (check out our recommendations for the most secure browsers).
+
+  You can exchange any kind of file, including music, videos and documents. If it’s a single file, you might even get it faster than you would with HTTP, unless the server is far away. If tuned properly, FTP may be better for large files, too (read our guide on sharing large files if it doesn’t work, though).You can also create directories, remove them and list files with FTP, but you may need to authenticate with a username and password first. Anonymous FTP servers don’t require keys and are usually used for open source software that is freely distributed.
+
+  SECURITY: 
+  FTP is far older than HTTP. It even preceded the TCP/IP protocol, the standard network protocol that powers the internet, so you could use it to transfer files between computers long before the internet was in its initial stages of development.
+  FTP is known to have security weaknesses. RFC 2228 was drafted to address them, but, in May 1999, authors of RFC 2577 were still able to identify vulnerabilities to brute force attacks, FTP bounce, packet capture, port stealing, spoofing and username enumeration.
+  Many of those stem from the fact that FTP doesn’t encrypt its traffic. Instead, transmissions are in clear text and anyone who’s able to perform packet capture on the network can read usernames, passwords, commands and data. That is a problem with other protocols defined before the creation of SSL/TLS, as well.
+  You can circumvent them by using FTPS, which is more secure. You could also try a better protocol, such as the SSH File Transfer Protocol. If that still doesn’t cut it, you can use Secure Shell, SSH or a virtual private network, which is one of the best ways to protect your privacy online. If you want to know which VPN to go with, read our best VPN providers article.
+
+  3a: a user login request: Salesxfer with password which is revealed in packet 9 (picture in file) on port 21
+  The topic of convo was the user credentials. 
+  This is terrible because the password is revealed on FTP. (See picture)
+
+
