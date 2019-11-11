@@ -1,21 +1,15 @@
-1. A title indicating what application-layer protocol is being used.
 
-  2. 1-2 paragraphs explaining how that protocol works and what it is used for. Include images and diagrams as necessary. Explain the steps taken in communication of the protocol.
-
-     - Include an image of the back-and-forth communication the protocol did in the pcap to help illustrate your explanation.
-
-  3. 2-3 paragraphs explaining what happened in the communication across the network.
-
-     - You should at least answer:
-
-       - Who was sending/receiving information?
-
-       - What was the topic of conversation?
-
-       - What data was transmitted?
-
-     - Include information such as ports used, source/destination IPs, and how much data was transmitted.
-
-     - **Use images throughout to explain how you found this information.**
 
   4. Any other information of note related to the PCAP file.
+
+  1. TCP and SMTP
+  2. Short for Simple Mail Transfer Protocol, a protocol for sending e-mail messages between servers. Most e-mail systems that send mail over the Internet use SMTP to send messages from one server to another; the messages can then be retrieved with an e-mail client using either POP or IMAP.
+  SMTP is part of the application layer of the TCP/IP protocol. 
+
+  It works by using a process called "store and forward," SMTP moves your email on and across networks. It works closely with something called the Mail Transfer Agent (MTA) to send your communication to the right computer and email inbox.
+  SMTP is independent of the particular transmission subsystem and requires only a reliable ordered data stream channel. In addition, the Internet Assigned Numbers Authority has allocated port 25 for both TCP and UDP for use by SMTP.
+
+  3a: Sender was 127.0.0.1 and reciever is the same. 
+  3b: EMAIL related materials 
+  3c: The topic of convo is a file transmitted called 1337.txt located in packet 22 I believe. 
+  3d: 1337.txt file 
